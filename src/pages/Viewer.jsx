@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLocation } from 'react-router';
 import styles from '../styles/Viewer.module.css';
+import ViewerCard from '../Components/ViewerCard';
 
 export default function Viewer() {
   const {
@@ -11,7 +12,9 @@ export default function Viewer() {
 
   return (
     <section className={styles.viewer}>
-      {columns.map((_, i) => console.log(i))}
+      {columns.map((_, i) => (
+        <ViewerCard key={i} />
+      ))}
     </section>
   );
 }
