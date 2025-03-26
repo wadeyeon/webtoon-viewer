@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router';
 import Button from '@mui/material/Button';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
@@ -11,6 +12,7 @@ import DialogContentText from '@mui/material/DialogContentText';
 
 export default function InputModal({ open, handleClose }) {
   const [column, setColumn] = useState('');
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setColumn(e.target.value);
@@ -28,8 +30,7 @@ export default function InputModal({ open, handleClose }) {
             const formData = new FormData(e.currentTarget);
             const formJson = Object.fromEntries(formData.entries());
             const column = formJson.column;
-            console.log(column);
-
+            navigate('/viewer', { state: { column } }); // 이동
             handleClose();
           },
         },
