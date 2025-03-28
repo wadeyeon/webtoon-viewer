@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router';
 import SpeedDial from '@mui/material/SpeedDial';
 import SpeedDialAction from '@mui/material/SpeedDialAction';
 import SettingsIcon from '@mui/icons-material/Settings';
@@ -15,6 +16,8 @@ const actions = [
 ];
 
 export default function Fab() {
+  const navigate = useNavigate();
+
   return (
     <SpeedDial
       ariaLabel='SpeedDial basic example'
@@ -25,7 +28,9 @@ export default function Fab() {
         <SpeedDialAction
           key={action.name}
           icon={action.icon}
-          onClick={action.onClick}
+          onClick={
+            action.name === 'home' ? () => navigate('/') : action.onClick
+          }
         />
       ))}
     </SpeedDial>
