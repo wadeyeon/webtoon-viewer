@@ -1,4 +1,5 @@
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { CssBaseline } from '@mui/material';
 import { Outlet } from 'react-router';
 import Fab from './Components/Fab';
 
@@ -11,6 +12,9 @@ const theme = createTheme({
       main: '#153af6',
     },
   },
+  colorSchemes: {
+    dark: true,
+  },
 });
 
 function App() {
@@ -18,6 +22,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <Outlet />
       <Fab />
+      <CssBaseline />
     </ThemeProvider>
   );
 }
