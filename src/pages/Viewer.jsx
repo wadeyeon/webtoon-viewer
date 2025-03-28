@@ -3,7 +3,6 @@ import { useLocation } from 'react-router';
 import styles from '../styles/Viewer.module.css';
 import ViewerCard from '../Components/ViewerCard';
 import ScrollToTopFab from '../Components/ScrollToTopFab';
-import Fab from '../Components/Fab';
 
 export default function Viewer() {
   const {
@@ -19,7 +18,6 @@ export default function Viewer() {
           <ViewerCard key={i} />
         ))}
       </section>
-      <Fab />
       <ScrollToTopFab />
     </>
   );
