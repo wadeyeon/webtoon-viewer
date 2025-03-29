@@ -10,18 +10,16 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 
-export default function InputModal({ open, handleClose }) {
+export default function InputModal({ open, onClose }) {
   const [column, setColumn] = useState('');
   const navigate = useNavigate();
 
-  const handleChange = (e) => {
-    setColumn(e.target.value);
-  };
+  const handleChange = (e) => setColumn(e.target.value);
 
   return (
     <Dialog
       open={open}
-      onClose={handleClose}
+      onClose={onClose}
       slotProps={{
         paper: {
           component: 'form',
@@ -31,7 +29,7 @@ export default function InputModal({ open, handleClose }) {
             const formJson = Object.fromEntries(formData.entries());
             const column = formJson.column;
             navigate('/viewer', { state: { column } }); // 이동
-            handleClose();
+            onClose();
           },
         },
       }}
@@ -49,8 +47,6 @@ export default function InputModal({ open, handleClose }) {
           >
             <MenuItem value={1}>1</MenuItem>
             <MenuItem value={2}>2</MenuItem>
-            <MenuItem value={3}>3</MenuItem>
-            <MenuItem value={4}>4</MenuItem>
           </Select>
         </FormControl>
       </DialogContent>

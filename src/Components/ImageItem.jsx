@@ -1,5 +1,4 @@
 import React from 'react';
-import { RefreshOutlined } from '@mui/icons-material';
 import styles from '../styles/ImageItem.module.css';
 
 export default function ImageItem({ file }) {

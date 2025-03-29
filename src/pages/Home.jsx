@@ -17,7 +17,7 @@ function Home() {
         <Button variant='contained' size='large' onClick={() => setOpen(true)}>
           START
         </Button>
-        <InputModal open={open} handleClose={() => setOpen(false)} />
+        <InputModal open={open} onClose={() => setOpen(false)} />
       </div>
     </section>
   );
