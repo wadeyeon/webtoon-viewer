@@ -28,11 +28,11 @@ Vite로 프로젝트 생성하고, Material UI 오픈소스를 이용하여 작�
 2. 홈 (다크)
    ![홈 다크](https://github.com/user-attachments/assets/dbc886ab-d594-4228-b12e-5951602a47c6)
 
-3. 팝업
-   ![팝업](https://github.com/user-attachments/assets/4f252168-246f-4fcd-9038-6955e763b092)
+3. 모달
+   ![모달](https://github.com/user-attachments/assets/4f252168-246f-4fcd-9038-6955e763b092)
 
-4. 팝업 (다크)
-   ![팝업 다크](https://github.com/user-attachments/assets/cd3c3a50-13fd-4b04-b003-ce849493ff11)
+4. 모달 (다크)
+   ![모달 다크](https://github.com/user-attachments/assets/cd3c3a50-13fd-4b04-b003-ce849493ff11)
 
 5. 뷰어
    ![뷰어](https://github.com/user-attachments/assets/3f4ed17c-1620-4067-a69e-e161d0abd8f9)
